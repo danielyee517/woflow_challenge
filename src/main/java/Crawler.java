@@ -43,7 +43,6 @@ public class Crawler {
     }
     private static void request(String url, HashSet<String> nodes, HashMap<String, Integer> edges) {
         try {
-            nodes.add(url);
             Connection con = Jsoup.connect(url);
             String json = con.ignoreContentType(true).execute().body();
 
